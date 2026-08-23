@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum STL — Daniel Tracey</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23003057'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23B3A369' text-anchor='middle'%3EDT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#003057;
+    --navy-deep:#001B33;
+    --navy-soft:#0F4C81;
+    --gold:#B3A369;
+    --gold-bright:#EAAA00;
+    --cream:#F7F5EF;
+    --paper:#FFFFFF;
+    --ink:#1C1C1C;
+    --ink-mid:#55524A;
+    --ink-muted:#96907E;
+    --line: rgba(0,48,87,0.14);
+    --radius:4px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter', sans-serif; line-height:1.6;
+  }
+  a{color:var(--navy); text-decoration:none;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold-bright); outline-offset:2px;}
+  h1,h2,h3{font-family:'Oswald', sans-serif; font-weight:600; margin:0; letter-spacing:0.01em;}
+  .label{font-family:'IBM Plex Mono', monospace; letter-spacing:0.08em; text-transform:uppercase; font-size:0.7rem; color:var(--ink-muted);}
+
+  .site-header{background:var(--navy); padding:0.9rem 2rem;}
+  .header-inner{max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
+  .brand{color:#fff; font-family:'Oswald', sans-serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;}
+  .brand span{color:var(--gold-bright);}
+  .back-link{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; color:rgba(255,255,255,0.75); display:flex; align-items:center; gap:6px;}
+  .back-link:hover{color:#fff;}
+  .back-link svg{width:14px; height:14px;}
+
+  main{max-width:1000px; margin:0 auto; padding:48px 24px 80px;}
+  .proj-head .label{margin-bottom:10px;}
+  .proj-head h1{font-size:2.2rem; color:var(--navy); margin-bottom:6px;}
+  .proj-head .meta{font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--ink-muted); margin-bottom:28px;}
+
+  .description{font-size:1.02rem; color:var(--ink-mid); max-width:680px; margin-bottom:16px;}
+
+  .sub-h{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy-soft); border-bottom:1px solid var(--line); padding-bottom:8px; margin:40px 0 20px;}
+
+  .gallery{display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;}
+  .gallery figure{margin:0; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .gallery img{display:block; width:100%; height:260px; object-fit:cover;}
+  .gallery figcaption{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.03em; color:var(--ink-mid); padding:10px 14px;}
+
+  .overview{margin-top:44px; font-size:0.95rem; color:var(--ink-mid); max-width:680px;}
+  .overview b{color:var(--navy); font-family:'Oswald', sans-serif; font-weight:600;}
+
+  @media (max-width:640px){
+    .gallery{grid-template-columns:1fr;}
+    .gallery img{height:220px;}
+    .site-header{padding:0.8rem 1.2rem;}
+    main{padding:36px 20px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">DANIEL <span>TRACEY</span></div>
+    <a class="back-link" href="index.html#portfolio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="proj-head">
+    <div class="label">University of Arkansas &middot; Professor Emily Baker</div>
+    <h1>Momentum STL</h1>
+    <div class="meta">Spring 2024 &middot; Public Works &middot; St. Louis, Missouri</div>
+  </div>
+
+  <p class="description">Momentum is a performing arts center focused on rebuilding communal bonds in the St. Louis metro area through redevelopment. A black-box and outdoor theater form the "heart" of the building around which users circulate, with a seating area adjacent to every rehearsal space for interaction beyond the performers themselves.</p>
+
+  <p class="description">Vertical circulation runs primarily along a "snake" that extrudes out from the primary form along both 22nd and Olive Streets and is visible from the street — a direct reference to the Delmar Divide, and to the idea that residents to the north still have a path to upward mobility through new communal projects that reconnect the city's split urban fabric. A secondary exterior patio rests above the snake as a spillout space that engages passersby, while a skylight over the lobby lights the entry to the black-box theater, the building's centerpiece. The lobby itself opens upward, giving the building a tall vertical spillout that spans the full height of the structure.</p>
+
+  <div class="sub-h">Gallery</div>
+  <div class="gallery">
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/427bf69b-301e-4f97-866a-49e21adc7351_rw_1200.jpg?h=ed1ae63eaf5384f779880d11816652dc" alt="Final Board - Design">
+      <figcaption>Final Board — Design</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/a3ac18e1-d64e-4250-8924-5f04fae90865_rw_1200.jpg?h=ef2b11e6c781333c015662b563bfcf7f" alt="Final Board - Research + Concept">
+      <figcaption>Final Board — Research &amp; Concept</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/1e699e2c-b862-45bb-81de-2e22048c2f7a_rw_1920.png?h=940adcaabf73c63bfc817089f45a3d08" alt="Concept">
+      <figcaption>Concept</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/50f84d24-d6f7-47b5-98b8-322654e39c70_rw_1920.png?h=2064531a26615d720880c680e5f92b2b" alt="Floorplans & Sections">
+      <figcaption>Floorplans &amp; Sections</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/2cce76d8-1f5c-428a-acce-22729034ccd3_rw_1200.png?h=56c50d64ebae0785e974e0525def5bb1" alt="From Across the Street">
+      <figcaption>From Across the Street</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/69f8a389-9d77-4b28-967e-6165ebd98945_rw_1200.png?h=8a722f4a73dcbbc253ea6271fd4ffbb2" alt="From Corner">
+      <figcaption>From the Corner</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/e01dd31b-96b6-4f42-a2ca-8e3c5ea9e549_rw_1200.png?h=0e69f47bd347a2a8cc1259b240dc4753" alt="Lobby">
+      <figcaption>Lobby</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/8b233177-c11b-4bef-bc41-d9d49a5e6ab1_rw_1200.png?h=ad9e33b5dd45738f7807a3ace609529a" alt="Cafe">
+      <figcaption>Café</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/919e2cfe-2070-43f3-859b-6914b96f077b_rw_1920.jpg?h=00cca7652ad80dd521b64b0356ef6046" alt="Concept Render">
+      <figcaption>Concept Render</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/da717b5f-e84c-4218-b192-43a43776e0fd_rw_1920.jpg?h=1c3ddba56329a2c0de9c209e70ffdd29" alt="Concept Render">
+      <figcaption>Concept Render, Street Level</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/a0f28223-0bfd-423b-85c6-8c262ef8f17a_rw_1200.png?h=959e8e162bfea6e053ae5fd9e08b183f" alt="Physical Model - Corner">
+      <figcaption>Physical Model — Corner</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/3657375f-872e-4e99-8918-4530c3ce249b_rw_1200.png?h=c852443a1d0049415af80839febec606" alt="Physical Model - Isometric">
+      <figcaption>Physical Model — Isometric</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/b5d95ea6-f031-44d9-90b8-c8750576e252_rw_1200.png?h=1c5d8d533798782b503802ed79c804b6" alt="Physical Model - Interior">
+      <figcaption>Physical Model — Interior</figcaption>
+    </figure>
+  </div>
+
+  <p class="overview"><b>Overview.</b> Momentum reads the Delmar Divide as a design problem as much as a social one — the "snake" circulation spine is the building's most legible move, pulling movement out to the street on both 22nd and Olive so the building's activity is visible and porous rather than closed off. The black-box theater, physical models, and site renders all study how a single civic anchor can knit a fractured block back together.</p>
+</main>
+
+</body>
+</html>

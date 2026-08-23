@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tall Order — Daniel Tracey</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23003057'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23B3A369' text-anchor='middle'%3EDT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#003057;
+    --navy-deep:#001B33;
+    --navy-soft:#0F4C81;
+    --gold:#B3A369;
+    --gold-bright:#EAAA00;
+    --cream:#F7F5EF;
+    --paper:#FFFFFF;
+    --ink:#1C1C1C;
+    --ink-mid:#55524A;
+    --ink-muted:#96907E;
+    --line: rgba(0,48,87,0.14);
+    --radius:4px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter', sans-serif; line-height:1.6;
+  }
+  a{color:var(--navy); text-decoration:none;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold-bright); outline-offset:2px;}
+  h1,h2,h3{font-family:'Oswald', sans-serif; font-weight:600; margin:0; letter-spacing:0.01em;}
+  .label{font-family:'IBM Plex Mono', monospace; letter-spacing:0.08em; text-transform:uppercase; font-size:0.7rem; color:var(--ink-muted);}
+
+  .site-header{background:var(--navy); padding:0.9rem 2rem;}
+  .header-inner{max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
+  .brand{color:#fff; font-family:'Oswald', sans-serif; font-weight:600; font-size:1.15rem; letter-spacing:0.02em;}
+  .brand span{color:var(--gold-bright);}
+  .back-link{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.04em; text-transform:uppercase; color:rgba(255,255,255,0.75); display:flex; align-items:center; gap:6px;}
+  .back-link:hover{color:#fff;}
+  .back-link svg{width:14px; height:14px;}
+
+  main{max-width:1000px; margin:0 auto; padding:48px 24px 80px;}
+  .proj-head .label{margin-bottom:10px;}
+  .proj-head h1{font-size:2.2rem; color:var(--navy); margin-bottom:6px;}
+  .proj-head .meta{font-family:'IBM Plex Mono', monospace; font-size:0.8rem; color:var(--ink-muted); margin-bottom:28px;}
+
+  .description{font-size:1.02rem; color:var(--ink-mid); max-width:680px; margin-bottom:16px;}
+
+  .sub-h{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy-soft); border-bottom:1px solid var(--line); padding-bottom:8px; margin:40px 0 20px;}
+
+  .gallery{display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;}
+  .gallery figure{margin:0; background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;}
+  .gallery img{display:block; width:100%; height:260px; object-fit:cover;}
+  .gallery figcaption{font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.03em; color:var(--ink-mid); padding:10px 14px;}
+
+  .overview{margin-top:44px; font-size:0.95rem; color:var(--ink-mid); max-width:680px;}
+  .overview b{color:var(--navy); font-family:'Oswald', sans-serif; font-weight:600;}
+
+  @media (max-width:640px){
+    .gallery{grid-template-columns:1fr;}
+    .gallery img{height:220px;}
+    .site-header{padding:0.8rem 1.2rem;}
+    main{padding:36px 20px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">DANIEL <span>TRACEY</span></div>
+    <a class="back-link" href="index.html#portfolio">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      Back to Portfolio
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="proj-head">
+    <div class="label">University of Arkansas</div>
+    <h1>Tall Order</h1>
+    <div class="meta">Fall 2022 &middot; Studio &middot; University of Arkansas &middot; Professor Laura Terry</div>
+  </div>
+
+  <p class="description">Tall Order was the first major project of Daniel's undergraduate architecture degree, built around exploring modular design at architectural scale. The assignment required designing and constructing a tower from a single chosen module, with the final physical model standing at least five feet tall at 1/16" scale. Core design principles — color, pattern, and scale — were emphasized throughout, with creative freedom in material choice as long as the internal wooden core stayed intact.</p>
+
+  <p class="description">The process began with a series of small models addressing three spatial conditions: sky, corner, and ground. These studies shaped the final concept, which was expected to carry all three conditions through unless a compelling design challenge required a documented and justified deviation. The chosen module was then scaled up and explored through iterative sketches and modeling, culminating in a twelve-foot-long working drawing — at least five feet of it devoted to the tower at final scale — presented alongside the constructed tower at final review.</p>
+
+  <div class="sub-h">Gallery</div>
+  <div class="gallery">
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/20477f34-0675-4d56-855f-9ddd8b1ed5ab_rw_1920.png?h=3bad025924ca014c74345078736ca648" alt="Tower from Top">
+      <figcaption>Tower from Top</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/7b21fa26-fd9a-4d5a-a0d9-8066993afc8d_rw_1920.png?h=4f4bba080d252de82fcf60683ff18d6c" alt="Tower from Distance">
+      <figcaption>Tower from Distance</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/9aa90e29-cd78-4df7-8210-439b89528492_rw_1920.png?h=e4f66aec74fc72f194102566b5add50f" alt="Tower from Ground">
+      <figcaption>Tower from Ground</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/1f919266-ee5b-45f8-8b7b-e42e30721fc1_rw_1200.png?h=72fdcb5500ae6f96ad60dd6f194dd52c" alt="Concept Pattern">
+      <figcaption>Concept Pattern</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/3c25a010-2fad-4982-970d-495f4c870baa_rw_1200.png?h=7f2b4644c8e163a963b4ebcdb023f380" alt="Concept Pattern">
+      <figcaption>Concept Pattern</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/11c13a14-9f3b-4727-a239-b76cf77b0470_rw_1200.png?h=4cf6fb7bce8a83ae3645a3b41905c613" alt="Sketchbook - Roll A">
+      <figcaption>Sketchbook - Roll A</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/5f624eb9-45bd-40f6-af90-d87fec1062e9_rw_1200.png?h=5fafc0956e412e72fec539d2e78949b5" alt="Sketchbook - Roll B">
+      <figcaption>Sketchbook - Roll B</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/638be949-a3e2-404b-9287-73ab2b622de1_rw_1200.png?h=3db9505ead9c1f320171f7629c95c09a" alt="Sketchbook - Roll C">
+      <figcaption>Sketchbook - Roll C</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/2508e27c-f5d8-4b14-bf45-b5e766ff8351_rw_1200.png?h=8d1cce105ec606e46785fb2ccdcf54da" alt="Sketchbook - Roll D">
+      <figcaption>Sketchbook - Roll D</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/6958747e-45d2-484d-9c7b-fdaad0bf1855_rw_1200.png?h=b8a19cab57a21a5235cc4623573e5d7c" alt="Sketchbook - Roll E">
+      <figcaption>Sketchbook - Roll E</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/7b92be2d-8b6c-4135-9194-e31e2adf7055_rw_1200.png?h=41a6a5b417f99b778ec1ae1dd3be24ba" alt="Sketchbook - Roll F">
+      <figcaption>Sketchbook - Roll F</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/26c43b94-a730-4ace-978f-0e8bf9f3aa86_rw_1920.png?h=4f8e93fb62c3f838efb39744e0897dc2" alt="Tower Construction">
+      <figcaption>Tower Construction</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/3e68d325-9185-402f-98f2-ae7be664bc90_rw_1920.png?h=22744247c4aa1be3bf9972820c2ce26b" alt="Tower Construction">
+      <figcaption>Tower Construction</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/5a50963f-81fb-4ebd-8cfd-5677e8b7079d_rw_1920.png?h=cba81cd40a43f5ef0f612fdae83fa814" alt="Tower Construction">
+      <figcaption>Tower Construction</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/fdb1693e-cdfd-42b7-9842-71d53298a5c3_rw_1920.png?h=c7b57efb001d464d835a806f2715d7fb" alt="Tower Construction">
+      <figcaption>Tower Construction</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/9456e440-cdb8-40d6-a4e8-1170c6307dde_rw_1920.png?h=a24028d77ac60cc3d981640c2c0d45f7" alt="Tower Construction">
+      <figcaption>Tower Construction</figcaption>
+    </figure>
+    <figure>
+      <img src="https://cdn.myportfolio.com/d76f7b65-6092-4e7f-ac13-dcb4f73c535a/233c3428-9bf2-4cac-8b10-6a550d645d6b_rw_1920.png?h=2b249aaa40682ab3f8ba0ddda4d5e98f" alt="Tower Construction">
+      <figcaption>Tower Construction</figcaption>
+    </figure>
+  </div>
+
+  <p class="overview"><b>Overview.</b> An early undergraduate module study: a repeating architectural module scaled up into a tower, presented alongside a twelve-foot working drawing tracing its full development.</p>
+</main>
+
+</body>
+</html>
