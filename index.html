@@ -329,6 +329,7 @@
     pointer-events:none;
   }
   .lamp-switch:focus-visible{ outline:2px solid var(--gold-bright); outline-offset:4px; border-radius:50%; }
+  .lamp-switch-icon, .lamp-switch-label{ display:none; }
   #entrance.lights-on .lamp-switch::after{ animation:none; box-shadow:none; }
   #entrance.lights-on .lamp-switch::before{ animation:none; opacity:0; }
   #entrance.lights-on .lamp-switch{ cursor:default; }
@@ -373,22 +374,37 @@
     .lamp-annotation{ animation:none; opacity:1; }
   }
   @media (max-width:640px){
-    .desk-lamp{ position:fixed; z-index:210; left:auto; top:auto; right:18px; bottom:18px;
-      width:auto; height:auto; }
+    .desk-lamp{
+      position:fixed; z-index:210; left:50%; right:auto; top:auto;
+      bottom:max(22px, env(safe-area-inset-bottom, 0px));
+      width:auto; height:auto;
+      transform:translateX(-50%);
+    }
     .desk-lamp svg{ display:none; }
     .lamp-annotation{ display:none; }
     .lamp-switch{
-      position:static; width:54px; height:54px; border-radius:50%;
-      background:rgba(20,24,28,.88); box-shadow:0 4px 14px rgba(0,4,10,.5);
+      position:static; display:flex; align-items:center; gap:10px;
+      width:auto; height:auto; padding:13px 22px 13px 16px;
+      border-radius:999px;
+      background:rgba(18,22,26,.92);
+      box-shadow:0 8px 22px rgba(0,4,10,.55), 0 0 0 1px rgba(255,255,255,.09) inset;
     }
-    .lamp-switch::before{
-      content:"\1F4A1"; position:absolute; inset:0; display:flex;
-      align-items:center; justify-content:center; font-size:1.3rem;
-      filter:grayscale(1) opacity(.7);
-      background:none; animation:none;
+    .lamp-switch::before{ content:none; }
+    .lamp-switch::after{ inset:-6px; border-radius:999px; }
+    .lamp-switch-icon{
+      display:block; width:22px; height:22px; flex:none;
+      font-size:1.3rem; line-height:22px; text-align:center;
+      filter:grayscale(1) opacity(.8);
     }
-    #entrance.lights-on .lamp-switch::before{ filter:none; }
-    .lamp-switch::after{ inset:-4px; }
+    .lamp-switch-icon::before{ content:"\1F4A1"; }
+    #entrance.lights-on .lamp-switch-icon{ filter:none; }
+    .lamp-switch-label{
+      display:block; white-space:nowrap;
+      font-family:'IBM Plex Mono', monospace; font-size:0.74rem; font-weight:600;
+      letter-spacing:0.06em; text-transform:uppercase; color:#FFF3D6;
+      animation:lamp-annotation-flash 1.6s ease-in-out infinite;
+    }
+    #entrance.lights-on .lamp-switch-label{ display:none; }
   }
 
   /* sparse drafting-tool details resting on the wood beyond the mat, for realism only */
@@ -859,6 +875,7 @@
 
   @media (max-width:640px){
     .board-scene{ width:88vw; }
+    .entry-hint{ bottom:calc(22px + 56px + 14px); }
     @keyframes entry-sheet-fall{
       0%{ transform:rotateX(0deg) rotateY(0deg) translateY(0) scale(1); opacity:1; }
       50%{ transform:rotateX(30deg) translateY(40px) scale(.97); opacity:1; }
@@ -1096,7 +1113,10 @@
         <ellipse cx="0" cy="-12" rx="21" ry="6.5" fill="#4C5155" opacity=".55"/>
       </g>
     </svg>
-    <button type="button" class="lamp-switch" id="lampSwitch" aria-label="Turn on the desk lamp"></button>
+    <button type="button" class="lamp-switch" id="lampSwitch" aria-label="Turn on the desk lamp">
+      <span class="lamp-switch-icon" aria-hidden="true"></span>
+      <span class="lamp-switch-label" aria-hidden="true">Tap to light the desk</span>
+    </button>
     <span class="lamp-annotation" aria-hidden="true">
       <span class="ann-leader"></span>
       <span class="ann-label">Turn on &rarr;</span>
